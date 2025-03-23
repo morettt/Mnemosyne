@@ -30,7 +30,7 @@ async def lifespan(api: FastAPI):
     global model, text_database
     
     # 初始化模型
-    model_dir = '/root/LLM-RAG/bge-large-zh-1.5'
+    model_dir = r'\model\RAG'
     model = FlagModel(
         model_dir,
         query_instruction_for_retrieval="检索：",
