@@ -1,6 +1,14 @@
 # Mnemosyne
 一个快速、好用。且不消耗API key的AI记忆系统。制作中...
 
+首先，这是letta的记忆逻辑，我做了一个图来理解
+
+![image](https://github.com/user-attachments/assets/c9c4be3b-982d-474b-b408-3e510a1e2723)
+
+
+
+
+
 
 ### 启动步骤
 
