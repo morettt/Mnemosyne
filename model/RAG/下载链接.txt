@@ -1,0 +1,1 @@
+https://www.modelscope.cn/models/Xorbits/bge-large-zh-v1.5
