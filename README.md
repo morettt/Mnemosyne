@@ -18,6 +18,9 @@
 ```bash
 conda create -n mnemosyne python=3.10 -y
 
+#linex系统
+source activate memosyne
+#win系统
 conda activate mnemosyne
 ```
 
