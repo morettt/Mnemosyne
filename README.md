@@ -16,10 +16,10 @@
 
 首先部署虚拟环境
 ```bash
-conda create -n memosyne python=3.10 -y
+conda create -n mnemosyne python=3.10 -y
 
 #linex系统
-source activate memosyne
+source activate mnemosyne
 #win系统
 conda activate mnemosyne
 ```
