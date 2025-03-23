@@ -7,7 +7,7 @@
 
 
 
-我的创新点是所有基于function calling的地方全都用bert或者小型开源的llm替代，大大减轻API KEY的消耗量，以及显著提升推理速度。
+我的创新点是在letta的记忆逻辑上，将所有基于function calling的地方全都用bert或者小型开源的llm替代，大大减轻API KEY的消耗量，以及显著提升推理速度。
 
 
 ### 启动步骤
