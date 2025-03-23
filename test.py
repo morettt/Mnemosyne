@@ -6,7 +6,7 @@ while True:
         break
         
     response = requests.post(
-        "http://localhost:6006/search",
+        "http://localhost:1111/search",
         json={"query": query, "top_k": 3}
     )
     
