@@ -20,6 +20,9 @@ class TextSimilarity(BaseModel):
 class QueryResponse(BaseModel):
     results: List[TextSimilarity]
 
+# 获取项目根目录的路径
+ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+
 # 全局变量
 model = None
 text_database = []
@@ -29,17 +32,21 @@ async def lifespan(api: FastAPI):
     # 启动时执行
     global model, text_database
     
-    # 初始化模型
-    model_dir = r'\model\RAG'
+    # 初始化模型 - 使用相对路径
+    model_dir = os.path.join(ROOT_DIR, 'model', 'RAG')
+    print(f"模型路径: {model_dir}")
+    
     model = FlagModel(
         model_dir,
         query_instruction_for_retrieval="检索：",
         use_fp16=True
     )
     
-    # 读取文本数据库文件
+    # 读取文本数据库文件 - 使用相对路径
     try:
-        database_file = os.path.join(os.path.dirname(__file__), 'text_database.txt')
+        database_file = os.path.join(ROOT_DIR, 'memory', 'text_database.txt')
+        print(f"数据库路径: {database_file}")
+        
         with open(database_file, 'r', encoding='utf-8') as f:
             text_database = [line.strip() for line in f.readlines() if line.strip()]
         print(f"成功加载数据库，共{len(text_database)}条记录")
@@ -104,4 +111,4 @@ async def health_check():
 
 # 启动服务器
 if __name__ == "__main__":
-    uvicorn.run(api, host="0.0.0.0", port=6006)
+    uvicorn.run(api, host="0.0.0.0", port=1111)
