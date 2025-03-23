@@ -33,3 +33,12 @@ modelscope download --model Xorbits/bge-large-zh-v1.5 --local_dir ./model/RAG
 ```bash
 python rag-api.py
 ```
+
+
+最后运行此代码测试
+
+```bash
+python test.py
+```
+
+
