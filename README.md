@@ -22,6 +22,12 @@ pip install -r requirements.txt
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 ```
 
+下载模型
+```bash
+modelscope download --model Xorbits/bge-large-zh-v1.5 --local_dir ./model/RAG
+
+```
+
 启动文本嵌入模型服务
 
 ```bash
